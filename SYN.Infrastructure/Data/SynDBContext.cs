@@ -13,6 +13,7 @@ namespace SYN.Infrastructure.Data
         public DbSet<FormElement> FormElements { get; set; }
         public DbSet<Form> Forms { get; set; }
         public DbSet<CustomerEntity> Customer { get; set; }
+        public DbSet<CustomerContactsEntity> CustomerContacts { get; set; }
     }
 }
      

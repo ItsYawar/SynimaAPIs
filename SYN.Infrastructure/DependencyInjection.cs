@@ -40,6 +40,7 @@ namespace SYN.Infrastructure
             services.AddScoped<IFormElementRepository, FormElementRepository>();
             services.AddScoped<IFormService, FormService>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICustomerContactsRepository, CustomerContactsRepository>();
 
 
             return services;

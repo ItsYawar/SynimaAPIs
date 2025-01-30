@@ -13,6 +13,5 @@ namespace SYN.Application.Queries
         {
             return await employeeRepositories.GetEmployees();
         }
-
     }
 }
