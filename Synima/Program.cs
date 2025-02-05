@@ -5,6 +5,7 @@ using SYN.Application.Interfaces;
 
 using SYN.Domain.Interfaces;
 using SYN.Domain.Options;
+using SYN.Infrastructure.Data;
 using SYN.Infrastructure.Repositories;
 
 using SYN.Infrastructure.Services;
@@ -58,6 +59,9 @@ builder.Services.AddSwaggerGen();
 //Register Db 
 var provider = builder.Services.BuildServiceProvider();
 var config = provider.GetRequiredService<IConfiguration>();
+
+//builder.Services.AddDbContext<SynDBContext>(options =>
+//    options.UseSqlServer(config.GetConnectionString("dbcs")));
 //builder.Services.AddDbContext<MyDbContext>(item => item.UseSqlServer(config.GetConnectionString("dbcs")));
 
 // Inject the DI services Synima namespace

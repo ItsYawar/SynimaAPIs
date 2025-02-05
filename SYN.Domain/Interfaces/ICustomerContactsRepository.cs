@@ -11,6 +11,10 @@ namespace SYN.Domain.Interfaces
     public interface ICustomerContactsRepository
     {
         Task<IEnumerable<CustomerContactsEntity>> GetCustomerContacts();
+
+       // Task<CustomerContactsEntity> AddCustomerContactsAsync(CustomerContactsEntity customerContactsEntity);
+
+        Task<bool> AddCustomerContactsAsync(List<CustomerContactsEntity> contacts);
         //Task<CustomerContacts> GetCustomerContactByIdAsync(long id);
         //Task<CustomerContacts> AddCustomerContactAsync(CustomerContacts customerContacts);
         //Task<CustomerContacts> UpdateCustomerContactAsync(long customerContactId, CustomerContacts customerContacts);

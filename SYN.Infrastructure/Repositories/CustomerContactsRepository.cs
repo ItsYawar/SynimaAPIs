@@ -17,5 +17,18 @@ namespace SYN.Infrastructure.Repositories
         {
             return await dbContext.CustomerContacts.ToListAsync();
         }
+
+        public async Task<CustomerContactsEntity> AddCustomerContactsAsync(CustomerContactsEntity customerContactsEntity)
+        {
+            dbContext.CustomerContacts.Add(customerContactsEntity);
+            await dbContext.SaveChangesAsync();
+            return customerContactsEntity;
+        }
+
+        public async Task<bool> AddCustomerContactsAsync(List<CustomerContactsEntity> contacts)
+        {
+            await dbContext.CustomerContacts.AddRangeAsync(contacts);
+            return await dbContext.SaveChangesAsync() > 0;
+        }
     }
 }
